@@ -1,0 +1,39 @@
+.about-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #000000;
+  outline: none;
+  .modal-container {
+    padding: 25px;
+    display: flex;
+
+    flex-direction: column;
+    .modal-content {
+      height: 20%;
+      padding: 2em;
+      flex: 1 0 auto;
+      font-family: Roboto, sans-serif;
+      .modal-content-links {
+        display: flex;
+        flex: row;
+        justify-content: space-around;
+      }
+    }
+    .modal-controls {
+      order: 1;
+      align-self: flex-end;
+      flex-direction: row;
+      .modal-controls-left {
+        align-self: flex-start;
+      }
+      .modal-controls-right {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+

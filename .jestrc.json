@@ -1,0 +1,68 @@
+{
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": [
+    "text",
+    "html",
+    "json-summary"
+  ],
+  "collectCoverageFrom": [
+    "**/*.js",
+    "!**/*.config.js",
+    "!**/node_modules/**",
+    "!**/coverage/**",
+    "!**/test/**"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 36,
+      "branches": 42,
+      "functions": 31,
+      "lines": 37
+    }
+  },
+  "moduleDirectories": [
+    "/node_modules/"
+  ],
+  "notify": true,
+  "projects": [
+    {
+      "displayName": "ESLint",
+      "runner": "jest-runner-eslint",
+      "moduleFileExtensions": [
+        "js",
+        "jsx",
+        "mjs"
+      ],
+      "testMatch": [
+        "<rootDir>/**/*.?(js|mjs)?(x)"
+      ],
+      "testPathIgnorePatterns": [
+        "/coverage/",
+        "/node_modules/"
+      ],
+      "modulePathIgnorePatterns": []
+    },
+    {
+      "displayName": "Markdown Lint",
+      "runner": "jest-runner-markdownlint",
+      "moduleFileExtensions": [
+        "md"
+      ],
+      "testMatch": [
+        "<rootDir>/**/*.md"
+      ],
+      "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/coverage/",
+        "/dist/"
+      ],
+      "modulePathIgnorePatterns": [
+        "/dist/"
+      ]
+    }
+  ],
+  "reporters": [
+    "jest-progress-bar-reporter"
+  ]
+}
